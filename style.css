@@ -10,6 +10,7 @@ body{
     margin: 0;;
     color:white;
     min-height:200px;
+    overflow-x:hidden;
 }
 
 /* ------------------style des classes "box"--------------- */
@@ -42,3 +43,15 @@ p{
     opacity:1;
     transform:translateX(0);
 }
+/* -------------creation de mousemove -------------------*/
+.mousemove{
+    height:50px;
+    width:50px;
+    border:2px solid pink;
+    position:absolute;
+    transform:translate(-50%, -50%);
+    border-radius:50%;
+    transition: 0.2s ease;
+    z-index:-1;
+}
+/* --------------add eevent mousedown -------------*/

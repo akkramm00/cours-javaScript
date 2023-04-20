@@ -48,4 +48,39 @@ btn2.addEventListener("click",()=>{
     response.classList.add("show-response");
     response.style.background = "red" ;
 })
+/*-----------------------------------------------------------------------------------------------*/
+// Mousemove= mouvement de la souris.
+const mousemove = document.querySelector(".mousemove");
+
+window.addEventListener("mousemove" , (e)=>{
+    mousemove.style.left = e.pageX +"px";  
+    mousemove.style.top = e.pageY +"px";   
+});
+
+// add mousedown--------------------------------------------------------------------
+window.addEventListener("mousedown", () =>{
+    mousemove.style.transform = "scale(2) translate(-25%, -25%)";
+});
+// Add mouseup----------------------------------------------------------------------
+window.addEventListener("mouseup", () =>{
+    mousemove.style.transform = "scale(1) translate(-50%, -50%)";
+    mousemove.style.border = "2px solid teal";
+});
+//add mouseenter--------------------------------------------------------------------
+questionContainer.addEventListener("mouseenter", ()=>{
+    questionContainer.style.background = "rgba(0, 0, 0, 0, 0.6)";
+});
+
+//add mouseout----------------------------------------------------------------------
+questionContainer.addEventListener("mouseout", ()=>{
+    questionContainer.style.background = "pink";
+});
+
+// afdd mouseover-------------------------------------------------------------------
+response.addEventListener("mouseover", ()=>{
+    response.style.transform = "rotate(11deg)";
+    response.style.marginTop = "50px";
+})
+
+
 
