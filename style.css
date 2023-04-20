@@ -3,12 +3,16 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     list-style:none;
 }
+
+/*------------------style du body ----------------*/
 body{
     text-align:center;
     margin: 0;;
     color:white;
     min-height:200px;
 }
+
+/* ------------------style des classes "box"--------------- */
 .box{
     border:6px solid white;
     transition: 0.25s ease;
@@ -16,14 +20,25 @@ body{
     padding:10px;
 }
 
+/* -------------------disposition de la balise "p" -------------------*/
 p{
     visibility:hidden;
     width:240px;
     margin:10px auto 0;
+    opacity:0;
+    transition:0.6s;
+    transform: translateX(-200px);
 }
-
+/* -----------------création d'une classe "go-question pour etre injecter a la réponse"--------------------*/
 .go-question{
     background:rgb(10, 3, 3);
-    border:10px solid green;
+    border:10px solid rgb(63, 81, 241);
     border-radius:25px;
+}
+
+/* -------------création d'une class pour ajouter des effets sur la reponse --------------*/
+.show-response{
+    visibility:visible;
+    opacity:1;
+    transform:translateX(0);
 }
