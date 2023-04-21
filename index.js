@@ -58,7 +58,7 @@ window.addEventListener("mousemove" , (e)=>{
 });
 
 // add mousedown--------------------------------------------------------------------
-window.addEventListener("mousedown", () =>{
+window.addEventListener("mousedown", () =>{ 
     mousemove.style.transform = "scale(2) translate(-25%, -25%)";
 });
 // Add mouseup----------------------------------------------------------------------
@@ -68,7 +68,7 @@ window.addEventListener("mouseup", () =>{
 });
 //add mouseenter--------------------------------------------------------------------
 questionContainer.addEventListener("mouseenter", ()=>{
-    questionContainer.style.background = "rgba(0, 0, 0, 0, 0.6)";
+    questionContainer.style.background = "rgba(0, 0, 0, 0.6)";
 });
 
 //add mouseout----------------------------------------------------------------------
@@ -76,11 +76,19 @@ questionContainer.addEventListener("mouseout", ()=>{
     questionContainer.style.background = "pink";
 });
 
-// afdd mouseover-------------------------------------------------------------------
+// add mouseover-------------------------------------------------------------------
 response.addEventListener("mouseover", ()=>{
-    response.style.transform = "rotate(11deg)";
-    response.style.marginTop = "50px";
+    response.style.transform = "rotate(2deg)";
+    response.style.marginTop = "10px";
 })
+//----------------------------------------------------------------------------------
+//add de keypress event-------------------------------------------------------------
+const keypressContainer = document.querySelector(".keypress");
+const key = document.getElementById("key");
+
+document.addEventListener("keypress",(e) => {
+key.textContent = e.key;
+});
 
 
 
