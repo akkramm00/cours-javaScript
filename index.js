@@ -122,6 +122,36 @@ window.addEventListener("scroll", () =>{
     nav.style.top ="-50px";
    }
 })
+//--------------------------------FormEvents ---------------------------------
+
+const inputName = document.querySelector('input[type="text"]');
+const select = document.querySelector("select");
+const form = document.querySelector("form");
+let pseudo = "";
+let language="";
+console.log(form)
+
+inputName.addEventListener("input" , (e) =>{
+  pseudo= e.target.value;// sur les input on utilise tjrs "e.target.value"pour recuperer les data.
+  
+});
+ // a noter: c'est toujours le meme principe a faire pour recuper les data .
+ select.addEventListener("input" , (e) =>{
+    language= e.target.value;
+ });
+ form.addEventListener("submit",(e) =>{
+    e.preventDefault();
+
+    if (cgv.cheked){
+        document.querySelector("form > div").innerHTML = `
+        <h3>Pseudo : ${pseudo}</h3>
+        <h4>Language préféré : ${language}</h4
+        `;
+    }else{
+        alert("veuillez accepter les CGV");
+    }
+
+ })
 
 
 
