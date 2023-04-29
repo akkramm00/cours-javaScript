@@ -47,6 +47,7 @@ p{
 .mousemove{
     height:50px;
     width:50px;
+    background:linear-gradient(red, white,red);
     border:2px solid pink;
     position:absolute;
     transform:translate(-50%, -50%);/* pour centrer le curseur et la bulle*/

@@ -46,6 +46,7 @@ btn1.addEventListener("click",()=>{
 })
 btn2.addEventListener("click",()=>{
     response.classList.add("show-response");
+    
     response.style.background = "red" ;
 })
 /*-----------------------------------------------------------------------------------------------*/
@@ -73,7 +74,7 @@ questionContainer.addEventListener("mouseenter", ()=>{
 
 //add mouseout----------------------------------------------------------------------
 questionContainer.addEventListener("mouseout", ()=>{
-    questionContainer.style.background = "pink";
+    questionContainer.style.background = "black";
 });
 
 // add mouseover-------------------------------------------------------------------
@@ -82,13 +83,31 @@ response.addEventListener("mouseover", ()=>{
     response.style.marginTop = "10px";
 })
 //----------------------------------------------------------------------------------
-//add de keypress event-------------------------------------------------------------
+//add de keypress event------------------------------------------------------------
 const keypressContainer = document.querySelector(".keypress");
 const key = document.getElementById("key");
 
-document.addEventListener("keypress",(e) => {
-key.textContent = e.key;
-});
+//déclaration d'une variable pour faire jouer un sens...
+const ring = (key) =>{
+    const audio = new Audio ();
+    audio.src = key + ".mp3";
+    audio.play();
+};
 
+document.addEventListener("keypress",(e) => {
+key.textContent = e.key;// pouvoir identifier tout les touches sur lesquelles on appuie.
+//on pourrais bien écrire = "voici un texte"a la place de =e.key ,il l'affichera ...donc "e.key"affiche les lettres tapées; on peut donner du style par la suite .
+
+if (e.key === "j"){
+    keypressContainer.style.background = "pink" ;
+}else if (e.key === "h"){
+    keypressContainer.style.background = "teal" ;
+}else if(e.key === "z"){
+    keypressContainer.style.background = "green";
+}else{
+    keypressContainer.style.background = "blue";
+}
+    ring(e.key)
+});
 
 
