@@ -25,7 +25,7 @@
 //      questionContainer.style.border = "3px solid teal";
 // });
 
-// il est préférable de déclarer les variables en h ut du ficher JS.
+// il est préférable de déclarer les variables en haut du ficher JS.
 const btn1 = document.querySelector("#btn1");
 const btn2 = document.getElementById("btn2");//Autre manière pour cibler les id = getElementById/ pas besoin de "#".
 const response = document.querySelector('.sentence')
@@ -141,7 +141,7 @@ inputName.addEventListener("input" , (e) =>{
  });
  form.addEventListener("submit",(e) =>{
     e.preventDefault();
-
+ 
     if (cgv.cheked){
         document.querySelector("form > div").innerHTML = `
         <h3>Pseudo : ${pseudo}</h3>
@@ -152,6 +152,21 @@ inputName.addEventListener("input" , (e) =>{
     }
 
  })
+ //----------------------Load event--------------------------------
+
+window.addEventListener("load", () => {
+    console.log("Document chargé !")
+});
+
+//comment selecctionner plusieurs element de la meme classe--------
+// ForEach
+const boxes = document.querySelectorAll(".box");
+boxes.array.forEach((box) => {
+    box.addEventListener("click" , (e) => {
+    e.target.style.transform = "scale(0.7)";
+    })
+});
+
 
 
 
