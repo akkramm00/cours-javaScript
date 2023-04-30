@@ -166,6 +166,24 @@ boxes.array.forEach((box) => {
     e.target.style.transform = "scale(0.7)";
     })
 });
+//----------------------------------------------------------------
+// addEventListener vs onclick :
+// document.body .onclick = () =>{
+// console.log("click !")
+// };
+
+// document.body .onclick = () =>{
+//     console.log("scroll !")
+// };
+// Bubbling => fin (de base l'enventlistener est paramétré en mode Bubbling)
+document.body;addEventListener("click" , ()=> {
+    console.log("click 1 !");
+}, false);
+
+document.body;addEventListener("click" , ()=> {
+    console.log("click 2 !");
+},true);
+
 
 
 
