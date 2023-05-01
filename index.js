@@ -183,6 +183,35 @@ document.body;addEventListener("click" , ()=> {
 document.body;addEventListener("click" , ()=> {
     console.log("click 2 !");
 },true);
+//------------------------------------------------------------------
+//En JavaScript, la méthode map() est une fonction intégrée qui permet de créer un nouveau tableau en appliquant une fonction à chaque élément d'un tableau existant. La méthode map() ne modifie pas le tableau d'origine, mais crée un nouveau tableau avec les résultats de l'appel de la fonction pour chaque élément. Voici sa syntaxe :
+const nouveauTableau = tableauOriginal.map((element, index, array) => {
+    // fonction qui est appliquée à chaque élément du tableauOriginal
+    return /* nouvelle valeur de l'élément */;
+  });
+//    element : l'élément actuel en cours de traitement dans le tableau.
+// index : l'indice de l'élément actuel en cours de traitement dans le tableau.
+// array : le tableau sur lequel la méthode map() a été appelée.
+// nouvelleValeur : la valeur qui sera ajoutée au nouveau tableau résultant de l'appel de la fonction.  
+const Nombres = [1, 2, 3, 4, 5];
+const doubles = nombres.map((nombre) => {
+  return nombre * 2;
+});
+console.log(doubles); // [2, 4, 6, 8, 10]
+//---------------------------------------------------------------------
+
+const fruits = ['pomme', 'banane', 'orange'];
+const nomsFruits = fruits.map((fruit) => {
+  return `Fruit : ${fruit}`;
+});
+console.log(nomsFruits); // ['Fruit : pomme', 'Fruit : banane', 'Fruit : orange']
+
+//Utiliser les index dans la fonction de transformation :
+const nombres = [1, 2, 3];
+const indices = nombres.map((nombre, index) => {
+  return `L'élément ${index} est ${nombre}`;
+});
+console.log(indices); // ["L'élément 0 est 1", "L'élément 1 est 2", "L'élément 2 est 3"]
 
 
 
